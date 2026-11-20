@@ -14,13 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Restore project files
+      - name: Restore and verify source archive
         shell: bash
         run: |
           set -euo pipefail
           cat epr-system-source.part*.b64 | base64 --decode > "$RUNNER_TEMP/epr-system-source.tar.gz"
+          echo "83a5ea778cf4083102a65153d37d11707d6ac0219328a587f710a76cdef7e051  $RUNNER_TEMP/epr-system-source.tar.gz" | sha256sum --check
           mkdir -p "$RUNNER_TEMP/source"
           tar -xzf "$RUNNER_TEMP/epr-system-source.tar.gz" -C "$RUNNER_TEMP/source"
+          test -f "$RUNNER_TEMP/source/epr-system/components/AppProvider.tsx"
+          test -f "$RUNNER_TEMP/source/epr-system/components/Shell.tsx"
           cp -a "$RUNNER_TEMP/source/epr-system/." .
           rm -f epr-system-source.part*.b64 epr-system.zip
           mkdir -p supabase/migrations
