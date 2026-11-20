@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "home": "Home",
+    "sell": "Sell",
+    "stock": "Stock",
+    "history": "Sales",
+    "staff": "Staff"
+  },
+  "home": {
+    "todaySales": "Sold today",
+    "salesCount": "{count} sales",
+    "lowStock": "Running low",
+    "lowStockNone": "Nothing is running low",
+    "recent": "Latest sales",
+    "emptyTitle": "Add your first product",
+    "emptyText": "Add what you sell, then record your first sale."
+  },
+  "sell": {
+    "title": "New sale",
+    "searchItem": "Search item",
+    "size": "Size",
+    "color": "Color",
+    "quantity": "How many",
+    "price": "Price paid",
+    "listPrice": "Tag price",
+    "payment": "Paid by",
+    "cash": "Cash",
+    "mobileMoney": "Mobile money",
+    "other": "Other",
+    "customerOptional": "Customer name or phone (optional)",
+    "done": "Save sale",
+    "saved": "Sale saved",
+    "receipt": "Show receipt",
+    "noItems": "No item found",
+    "total": "Total",
+    "remove": "Remove"
+  },
+  "stock": {
+    "title": "Stock",
+    "inStock": "{count} in stock",
+    "outOfStock": "Finished",
+    "addStock": "Add stock",
+    "addProduct": "Add product"
+  },
+  "history": {
+    "title": "Sales",
+    "soldBy": "Sold by {name}",
+    "belowMin": "Sold below minimum price",
+    "voided": "Cancelled",
+    "cancelSale": "Cancel this sale",
+    "confirmCancel": "Cancel this sale? The stock will go back."
+  },
+  "receipt": {
+    "title": "Receipt",
+    "number": "Receipt no. {no}",
+    "total": "Total",
+    "share": "Share",
+    "print": "Print"
+  },
+  "errors": {
+    "notEnoughStock": "Not enough stock for {item}.",
+    "generic": "Something went wrong. Please try again."
+  },
+  "currency": "FCFA",
+  "common": {
+    "loading": "Loading…",
+    "cancel": "Cancel"
+  },
+  "auth": {
+    "email": "Email",
+    "password": "Password",
+    "signIn": "Sign in",
+    "createAccount": "Create account",
+    "toCreate": "New here? Create an account",
+    "toSignIn": "Already have an account? Sign in",
+    "checkEmail": "Check your email to confirm your account, then sign in.",
+    "welcome": "Set up your shop",
+    "businessName": "Shop name",
+    "yourName": "Your name",
+    "start": "Start",
+    "signOut": "Sign out",
+    "loadErrorTitle": "We couldn't load your shop",
+    "loadErrorText": "Your account may already have a shop. Please try again or sign in again.",
+    "tryAgain": "Try again",
+    "createShopError": "We couldn't create the shop. Please try again or contact support."
+  },
+  "staff": {
+    "title": "Staff",
+    "add": "Add a salesperson",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password (6+ characters)",
+    "create": "Add",
+    "empty": "No salespeople yet",
+    "created": "Salesperson added"
+  },
+  "product": {
+    "title": "New product",
+    "name": "Product name",
+    "listPrice": "Tag price (FCFA)",
+    "minPrice": "Lowest price allowed (optional)",
+    "costPrice": "What you paid for it (optional, only you see it)",
+    "sizes": "Sizes, separated by commas (optional)",
+    "colors": "Colors, separated by commas (optional)",
+    "qty": "How many of each",
+    "save": "Save product"
+  }
+}

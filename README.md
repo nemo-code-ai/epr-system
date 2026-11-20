@@ -1,30 +1,42 @@
 # EPR System
 
-A lightweight ERP app for managing products, stock, sales, receipts and staff.
+A lightweight ERP app for managing products, stock, sales, receipts, and staff.
 
-## Stack
+## Requirements
 
-- Node.js 26.13.0
-- Next.js 16
-- Supabase Auth, Postgres and Edge Functions
-- English and French interface
+- Node.js 26 LTS (26.13.0)
+- npm
+- A Supabase project with the SQL in `schema.sql` applied
+
+## Local setup
+
+1. Install Node.js 26.13.0 (the repository pins it in `.nvmrc` and `.node-version`).
+2. Install dependencies with `npm install`.
+3. Copy `.env.example` to `.env.local` and set the Supabase URL and publishable key.
+4. Run `npm run dev` and open `http://localhost:3000`.
 
 ## Supabase configuration
 
-Set these browser-safe environment variables:
+The app uses these browser-safe environment variables:
 
 - `NEXT_PUBLIC_SUPABASE_URL`
 - `NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY`
 
-Never put a Supabase secret/service-role key in browser code or source control. Staff creation is handled by the `create-staff` Edge Function, which uses the server-side Supabase secret supplied by the Edge Runtime.
+The `create-staff` Supabase Edge Function performs the privileged Supabase Auth operation. Supabase injects the project's publishable and secret key maps into Edge Function runtime variables. The function checks the caller's publishable key, validates the user's access token, and verifies the caller is an active business owner before creating a salesperson.
 
-## Onboarding bug fix
-
-Authenticated users must be granted table-level Data API privileges before Postgres row-level security policies can filter their rows. The SQL migration under `supabase/migrations` grants only the table/column operations the application needs. The client now distinguishes a missing profile from a failed profile read, so temporary permission/API errors cannot incorrectly send an existing shop owner to onboarding.
-
-## Run locally
+Deploy the function from this repository with the Supabase CLI:
 
 ```bash
-npm install
-npm run dev
+supabase functions deploy create-staff --no-verify-jwt
+```
+
+`--no-verify-jwt` is intentional because the function uses the new non-JWT publishable key. The function performs its own API-key and user-token verification before any privileged action.
+
+Never put a Supabase secret key or service-role key in `.env.local`, `NEXT_PUBLIC_*` variables, GitHub, or browser code.
+
+## Build
+
+```bash
+npm run build
+npm start
 ```

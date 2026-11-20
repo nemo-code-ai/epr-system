@@ -1,0 +1,61 @@
+.lang-toggle {
+  --track: #1f3d36;
+  --knob: #f3e9d2;
+  --ink-on-knob: #1f3d36;
+  --ink-on-track: #cfe0d9;
+
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 84px;
+  height: 44px; /* comfortable tap target on a phone */
+  padding: 4px;
+  border: 0;
+  border-radius: 999px;
+  background: var(--track);
+  cursor: pointer;
+  font: 600 15px/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.lang-toggle__label {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: var(--ink-on-track);
+  transition: color 0.2s;
+}
+
+.lang-toggle__knob {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: calc(50% - 4px);
+  height: calc(100% - 8px);
+  border-radius: 999px;
+  background: var(--knob);
+  transition: transform 0.22s cubic-bezier(0.3, 0.7, 0.2, 1);
+}
+
+.lang-toggle[data-locale="fr"] .lang-toggle__knob {
+  transform: translateX(100%);
+}
+
+/* The label sitting on the knob gets dark text */
+.lang-toggle[data-locale="en"] .lang-toggle__label:nth-of-type(2),
+.lang-toggle[data-locale="fr"] .lang-toggle__label:nth-of-type(3) {
+  color: var(--ink-on-knob);
+}
+
+.lang-toggle:focus-visible {
+  outline: 3px solid #e0a43a;
+  outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .lang-toggle__knob,
+  .lang-toggle__label {
+    transition: none;
+  }
+}

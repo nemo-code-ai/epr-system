@@ -1,0 +1,108 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "sell": "Vendre",
+    "stock": "Stock",
+    "history": "Ventes",
+    "staff": "Équipe"
+  },
+  "home": {
+    "todaySales": "Vendu aujourd’hui",
+    "salesCount": "{count} ventes",
+    "lowStock": "Bientôt épuisé",
+    "lowStockNone": "Rien n’est bientôt épuisé",
+    "recent": "Dernières ventes",
+    "emptyTitle": "Ajoutez votre premier article",
+    "emptyText": "Ajoutez ce que vous vendez, puis enregistrez votre première vente."
+  },
+  "sell": {
+    "title": "Nouvelle vente",
+    "searchItem": "Chercher un article",
+    "size": "Taille",
+    "color": "Couleur",
+    "quantity": "Quantité",
+    "price": "Prix payé",
+    "listPrice": "Prix affiché",
+    "payment": "Payé par",
+    "cash": "Espèces",
+    "mobileMoney": "Mobile money",
+    "other": "Autre",
+    "customerOptional": "Nom ou téléphone du client (facultatif)",
+    "done": "Enregistrer la vente",
+    "saved": "Vente enregistrée",
+    "receipt": "Voir le reçu",
+    "noItems": "Aucun article trouvé",
+    "total": "Total",
+    "remove": "Retirer"
+  },
+  "stock": {
+    "title": "Stock",
+    "inStock": "{count} en stock",
+    "outOfStock": "Épuisé",
+    "addStock": "Ajouter du stock",
+    "addProduct": "Ajouter un article"
+  },
+  "history": {
+    "title": "Ventes",
+    "soldBy": "Vendu par {name}",
+    "belowMin": "Vendu sous le prix minimum",
+    "voided": "Annulée",
+    "cancelSale": "Annuler cette vente",
+    "confirmCancel": "Annuler cette vente ? Le stock sera remis."
+  },
+  "receipt": {
+    "title": "Reçu",
+    "number": "Reçu n° {no}",
+    "total": "Total",
+    "share": "Partager",
+    "print": "Imprimer"
+  },
+  "errors": {
+    "notEnoughStock": "Stock insuffisant pour {item}.",
+    "generic": "Une erreur s’est produite. Veuillez réessayer."
+  },
+  "currency": "FCFA",
+  "common": {
+    "loading": "Chargement…",
+    "cancel": "Annuler"
+  },
+  "auth": {
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "signIn": "Se connecter",
+    "createAccount": "Créer un compte",
+    "toCreate": "Nouveau ? Créez un compte",
+    "toSignIn": "Déjà un compte ? Connectez-vous",
+    "checkEmail": "Vérifiez votre e-mail pour confirmer votre compte, puis connectez-vous.",
+    "welcome": "Configurez votre boutique",
+    "businessName": "Nom de la boutique",
+    "yourName": "Votre nom",
+    "start": "Commencer",
+    "signOut": "Déconnexion",
+    "loadErrorTitle": "Impossible de charger votre boutique",
+    "loadErrorText": "Votre compte possède peut-être déjà une boutique. Réessayez ou reconnectez-vous.",
+    "tryAgain": "Réessayer",
+    "createShopError": "Impossible de créer la boutique. Réessayez ou contactez le support."
+  },
+  "staff": {
+    "title": "Équipe",
+    "add": "Ajouter un vendeur",
+    "name": "Nom",
+    "email": "E-mail",
+    "password": "Mot de passe (6 caractères min.)",
+    "create": "Ajouter",
+    "empty": "Aucun vendeur pour l’instant",
+    "created": "Vendeur ajouté"
+  },
+  "product": {
+    "title": "Nouvel article",
+    "name": "Nom de l’article",
+    "listPrice": "Prix affiché (FCFA)",
+    "minPrice": "Prix minimum autorisé (facultatif)",
+    "costPrice": "Prix d’achat (facultatif, vous seul le voyez)",
+    "sizes": "Tailles, séparées par des virgules (facultatif)",
+    "colors": "Couleurs, séparées par des virgules (facultatif)",
+    "qty": "Quantité de chaque",
+    "save": "Enregistrer l’article"
+  }
+}
